@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- dizayna çox vaxt ayırmaq istəmədim-->
+    <div class="todo">
+        <h1>To Do List</h1>
+    <input type="text" class="todoinp">
+    <button onclick="add()">add</button>
+    <div class="item">
+        <div class="icon">
+           <ul id="ul-list">
+            <li> 
+            <p>gym</p>
+            <i class="fa-solid fa-check ok" onclick="doneList(this)"></i>
+            <i class="fa-solid fa-xmark del" onclick="deleteList(this)"></i>
+            </li>
+           </ul>
+        </div>
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+<style>
+    .todo{
+        text-align: center;
+    margin: auto;
+    width: 400px;
+    }
+    li{
+        display: flex;
+        width: 350px;
+        justify-content: space-between;
+    }
+    .icon li p{
+        margin: 0;
+        padding: 0;
+        padding-right: 20px;
+        font-size: 30px;
+        
+    }
+    .ok, .del{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .ok{
+        color: green;
+    }
+    .del{
+        color: red;
+    }
+    .icon .ok:hover{
+        cursor: pointer;
+    }
+    .icon .del:hover{
+        cursor: pointer;
+    }
+</style>    
